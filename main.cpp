@@ -1,5 +1,6 @@
 #include <iostream>
 #include <pqxx/pqxx>
+#include <string>
 
 using namespace std;
 using namespace pqxx;
@@ -22,7 +23,7 @@ int main(int argc, char* argv[]) {
         }
         
         /*
-        char * sql;
+        string sql;
         
         sql = "";
         work W(db);
