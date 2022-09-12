@@ -20,20 +20,23 @@ int main(int argc, char* argv[]) {
             cout << "Can't open Database" << endl;
             return 1;
         }
-
-        char * sql;
-
+        
         /*
+        char * sql;
+        
+        sql = "";
         work W(db);
         W.exec(sql)
-        */
-
-        nontransaction N(db);
+        
+        or
+        
         sql = "SELECT * FROM ";
+        nontransaction N(db);
         result R(N.exec(sql));
         for (result::const_iterator c = R.begin(); c != R.end(); ++c) {
             cout << "ID=" << c[0] << endl;
         }
+        */
 
         db.disconnect();
         return 0;
