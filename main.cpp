@@ -8,9 +8,9 @@ int main(int argc, char* argv[]) {
 
     try {
         connection db("\
-        dbname = mydb \
+        dbname = database_name \
         user = postgres \
-        password = admin \
+        password = password \
         hostaddr = 127.0.0.1 \
         port = 5432 \
         ");
