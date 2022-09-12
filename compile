@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ main.cpp -lpqxx -lpq -o main 
