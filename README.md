@@ -1,5 +1,5 @@
 # Connect to a PostgreSQL Database in C++
-*Tested on Debian 10.2.1-6 / Ubuntu 22.04.1*
+*Tested on Debian 10.2.1 / Ubuntu 22.04.1*
 
 <br>
 
