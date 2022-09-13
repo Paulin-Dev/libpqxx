@@ -1,6 +1,7 @@
 #include <iostream>
 #include <pqxx/pqxx>
 #include <string>
+#include <fstream>
 
 using namespace std;
 using namespace pqxx;
@@ -8,13 +9,13 @@ using namespace pqxx;
 int main(int argc, char* argv[]) {
 
     try {
-        connection db("\
-        dbname = database_name \
-        user = postgres \
-        password = password \
-        hostaddr = 127.0.0.1 \
-        port = 5432 \
-        ");
+        connection db(R"""(
+        dbname = database_name
+        user = postgres
+        password = password
+        hostaddr = 127.0.0.1
+        port = 5432
+        )""");
         if (db.is_open()) {
             cout << "Opened Database successfully : " << db.dbname() << endl;
         } else {
@@ -25,7 +26,8 @@ int main(int argc, char* argv[]) {
         /*
         string sql;
         
-        sql = "";
+        fsteam f("queries/base.sql", fsteam::in);
+        getline(f, sql, '\0');
         work W(db);
         W.exec(sql)
         W.commit()      // 	W.abort()
