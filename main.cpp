@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
         db.disconnect();
         return 0;
 
-    } catch (const std::exception &e) {
+    } catch (const exception &e) {
         cerr << e.what() << endl;
         return 1;
     }
