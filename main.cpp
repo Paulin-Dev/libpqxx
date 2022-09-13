@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
         sql = "";
         work W(db);
         W.exec(sql)
+        W.commit()      // 	W.abort()
         
         or
         
