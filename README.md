@@ -115,3 +115,8 @@ g++ main.cpp -lpqxx -lpq -o output
 ```
 
 You can now **execute** the compiled file with `./output`
+
+**See** tables :
+```shell
+sudo -u postgres psql -d database_name -c "\dt"
+```
